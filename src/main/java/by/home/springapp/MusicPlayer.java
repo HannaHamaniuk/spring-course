@@ -1,7 +1,10 @@
 package by.home.springapp;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MusicPlayer {
-    private Music music;
+   List<Music>musicList=new ArrayList<>();
     private String name;
     private int volume;
 
@@ -26,15 +29,14 @@ public class MusicPlayer {
     public MusicPlayer() {
     }
 
-    //Inversion of controll
-    public MusicPlayer(Music music) {
-        this.music = music;
-    }
-    public void playMusic(){
-        System.out.println("playing "+music.getSong());
+    public void setMusicList(List<Music> musicList) {
+        this.musicList = musicList;
     }
 
-    public void setMusic(Music music) {
-        this.music = music;
+    public void playMusic(){
+       musicList.forEach( (music -> music.getSong()));
+    }
+
+    public void setMusic(String music) {
     }
 }
