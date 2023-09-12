@@ -37,6 +37,6 @@ public class MusicPlayer {
        musicList.forEach( (music -> music.getSong()));
     }
 
-    public void setMusic(String music) {
-    }
+
+
 }
