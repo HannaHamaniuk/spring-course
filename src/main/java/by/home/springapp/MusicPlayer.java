@@ -3,6 +3,8 @@ package by.home.springapp;
 public class MusicPlayer {
     private Music music;
 
+    public MusicPlayer() {
+    }
 
     //Inversion of controll
     public MusicPlayer(Music music) {
